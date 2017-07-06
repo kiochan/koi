@@ -1,4 +1,5 @@
 export { koi };
+import { koi } from './plugin/plugin'
 
 namespace koi {
     export function run(container_id: string) {
@@ -9,10 +10,10 @@ namespace koi {
     export class Koi {
         public pixi: PIXI.Application;
 
-        private m_width: number = 1920;
-        private m_height: number = 1080;
+        private m_width: number = 480;
+        private m_height: number = 800;
 
-        private m_container;
+        private m_container: HTMLElement;
 
         constructor(container_id: string) {
             const container = document.getElementById(container_id);
