@@ -10,7 +10,7 @@ class Main {
     }
 
     public static run() {
-        const app = koi.run("koi-player");
+        const app = koi.runKoi("koi-player");
 
         PIXI.loader.add('bunny', './res/activities_arrow.png').load(function(loader, resources) {
 
