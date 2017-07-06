@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"target": "es5",
 		"locale": "zh-CN",
+    	"sourceMap": true,
         "alwaysStrict": true,
 		"experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,

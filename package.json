@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "lite-server",
-    "webpack": "webpack --config webpack.config.js",
-    "build": "tsc && webpack && gulp clean-tsc"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "WYM",
   "license": "ISC",
@@ -21,6 +20,7 @@
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.7",
     "lite-server": "^2.3.0",
+    "ts-loader": "^2.2.2",
     "webpack": "^3.0.0"
   }
 }
