@@ -1,6 +1,6 @@
-export { koi }
+export { Koi as koi }
 
-class koi {
+class Koi {
     public static runKoi(container_id: string): KoiApp {
         const app = new KoiApp(container_id);
         return app;
@@ -11,7 +11,7 @@ class koi {
     }
 
     public static plugin(plugin: string /* plugin: Plugin */): void {
-        console.log("plugin registed: " + plugin);
+        console.log('plugin registed: ' + plugin);
     }
 }
 
@@ -25,7 +25,7 @@ class KoiApp {
         KoiApp.m_instance = this;
         const container = document.getElementById(container_id);
         if (!container) {
-            console.error(`cant found container "${container_id}".`);
+            console.error(`cant found container '${container_id}'.`);
             return;
         }
 
@@ -43,19 +43,19 @@ class KoiApp {
     public onResize(): void {
         const container = this.m_container;
         const view = this.pixi.view;
-        var ratio = this.m_width / this.m_height;
-        var w = document.body.clientWidth;
-        var h = document.body.clientHeight;
+        const ratio = this.m_width / this.m_height;
+        const w = document.body.clientWidth;
+        const h = document.body.clientHeight;
         if (w / h > ratio) {
-            container.style.top = "0";
-            container.style.left = ((w - h * ratio) / 2) + "px";
-            view.style.height = h + "px";
-            view.style.width = h * ratio + "px";
+            container.style.top = '0';
+            container.style.left = ((w - h * ratio) / 2) + 'px';
+            view.style.height = h + 'px';
+            view.style.width = h * ratio + 'px';
         } else {
-            container.style.top = ((h - w / ratio) / 2) + "px";
-            container.style.left = "0";
-            view.style.height = w / ratio + "px";
-            view.style.width = w + "px";
+            container.style.top = ((h - w / ratio) / 2) + 'px';
+            container.style.left = '0';
+            view.style.height = w / ratio + 'px';
+            view.style.width = w + 'px';
         }
     }
 
@@ -63,7 +63,7 @@ class KoiApp {
     private static m_instance: KoiApp;
     public static getInstance(): KoiApp {
         if (!this.m_instance) {
-            console.error("Koi is not initialized.");
+            console.error('Koi is not initialized.');
             return null;
         }
         return this.m_instance;
