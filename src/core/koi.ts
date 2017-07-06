@@ -39,13 +39,15 @@ namespace koi {
             var w = document.body.clientWidth;
             var h = document.body.clientHeight;
             if (w / h > ratio) {
-                container.style.top = "0px";
+                container.style.top = "0";
                 container.style.left = ((w - h * ratio) / 2) + "px";
-                container.style.transform = "scale(" + h / this.m_height + ")";
+                this.pixi.view.style.height = h + "px";
+                this.pixi.view.style.width = h * ratio + "px";
             } else {
                 container.style.top = ((h - w / ratio) / 2) + "px";
-                container.style.left = "0px";
-                container.style.transform = "scale(" + w / this.m_width + ")";
+                container.style.left = "0";
+                this.pixi.view.style.height = w / ratio + "px";
+                this.pixi.view.style.width = w + "px";
             }
         }
     }
