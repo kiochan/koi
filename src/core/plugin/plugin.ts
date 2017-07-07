@@ -1,10 +1,10 @@
-import Hub from './hub'
+import KoiApp from '../app'
 
 interface Plugin {
 
     name: string;
 
-    init(hub: Hub);
+    init(app: KoiApp);
 
 }
 

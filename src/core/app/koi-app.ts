@@ -14,7 +14,7 @@ class KoiApp {
     constructor(container_id: string, options?: Object) {
         KoiApp.m_instance = this;
 
-        this.hub = new Hub();
+        this.hub = new Hub(this);
         this.middleware = new Middleware();
         this.player = new Player();
 

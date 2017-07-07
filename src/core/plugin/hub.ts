@@ -1,11 +1,13 @@
 import Plugin from './plugin'
-import Singleton from '../utils/singleton'
+import KoiApp from '../app'
 
 class Hub {
 
+    private app: KoiApp;
     private plugins: Map<string, Plugin>;
 
-    constructor() {
+    constructor(app: KoiApp) {
+        this.app = app;
         this.plugins = new Map<string, Plugin>();
     }
 
@@ -15,8 +17,12 @@ class Hub {
             console.warn(`plugin "${name}" has been registed duplicately, will be overwritten.`);
         }
 
-        plugin.init(this);
+        plugin.init(this.app);
         this.plugins.set(name, plugin);
+    }
+
+    public get(name: string): Plugin {
+        return this.plugins.get(name);
     }
 
 }
