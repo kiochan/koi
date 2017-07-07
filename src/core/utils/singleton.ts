@@ -1,6 +1,5 @@
-export { Singleton }
-
 class Singleton {
+
     private static objs: Map<any, any> = new Map<any, any>();
 
     public static has<U>(target: { new (): U }): boolean {
@@ -25,3 +24,5 @@ class Singleton {
     }
 
 }
+
+export default Singleton
