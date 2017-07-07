@@ -10,10 +10,12 @@
   "author": "WYM",
   "license": "ISC",
   "dependencies": {
+    "koa-compose": "^4.0.0",
     "pixi.js": "^4.5.3",
     "typescript": "^2.4.1"
   },
   "devDependencies": {
+    "@types/koa-compose": "^3.2.2",
     "@types/pixi.js": "^4.5.0",
     "concurrently": "^3.5.0",
     "del": "^3.0.0",
