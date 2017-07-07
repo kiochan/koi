@@ -1,4 +1,5 @@
 import { koi } from './core/koi'
+import Plugsample from './plugin/plugsample'
 
 window.onload = function() {
     Main.run();
@@ -11,6 +12,8 @@ class Main {
 
     public static run() {
         const app = koi.runKoi('koi-player');
+
+        app.plugin(new Plugsample());
 
         PIXI.loader.add('bunny', './res/activities_arrow.png').load(function(loader, resources) {
 
