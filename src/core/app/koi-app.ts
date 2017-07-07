@@ -1,7 +1,7 @@
 import Hub from '../plugin/hub'
-import Plugin from '../plugin/plugin'
+import Plugin from '../plugin'
 import Compose from 'koa-compose'
-import Middleware from '../middleware/middleware'
+import Middleware from '../middleware'
 import Context from '../middleware/context'
 import Player from '../player/player'
 
