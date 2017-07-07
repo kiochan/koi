@@ -23,6 +23,7 @@ npm run build
 * Plugin √
 * Resource
 * UI
+* Audio
 * Tween
 * build-in AVG Plugins
 * Server (login, chat, cloud-save)
