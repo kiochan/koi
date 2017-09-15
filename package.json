@@ -1,10 +1,10 @@
 {
-  "name": "learn-pixi",
-  "version": "1.0.0",
+  "name": "koi",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server",
+    "dev": "concurrently \"webpack -p -d\" \"webpack-dev-server --hot --inline\"",
     "build": "webpack --config webpack.config.js"
   },
   "author": "WYM",
@@ -12,7 +12,7 @@
   "dependencies": {
     "koa-compose": "^4.0.0",
     "pixi.js": "^4.5.3",
-    "typescript": "^2.4.1"
+    "typescript": "^2.5.2"
   },
   "devDependencies": {
     "@types/koa-compose": "^3.2.2",
@@ -23,6 +23,7 @@
     "gulp-typescript": "^3.1.7",
     "lite-server": "^2.3.0",
     "ts-loader": "^2.2.2",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }
