@@ -29,5 +29,5 @@ npm run build
 * Server (login, chat, cloud-save)
 * Version Control (hotfix)
 * i18n
-* Egret EXML Support
+* FairyGUI Support
 * Electron
