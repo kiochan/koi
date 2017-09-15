@@ -2,7 +2,7 @@
 
   An optional Visual Novel solutions based on pixi.js.
 
-  Note: Koi is still under developmenet and unstable. Don't use it in production environment currently.
+  Note: WIP. Koi is still under developmenet and unstable. Don't use it in production environment currently.
 
 ## Getting Started
 
