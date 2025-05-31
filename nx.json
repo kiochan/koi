@@ -44,7 +44,16 @@
     { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } }
   ],
-  "targetDefaults": { "test": { "dependsOn": ["^build"] } },
+  "targetDefaults": {
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  },
   "generators": {
     "@nx/next": { "application": { "style": "tailwind", "linter": "eslint" } }
   },
