@@ -12,15 +12,15 @@
         "defaultConfiguration": "production",
         "options": {
           "platform": "node",
-          "outputPath": "packages/electron/dist",
+          "outputPath": "packages/electron-main/dist",
           "format": [
             "cjs"
           ],
           "bundle": false,
-          "main": "packages/electron/src/main.ts",
-          "tsConfig": "packages/electron/tsconfig.app.json",
+          "main": "packages/electron-main/src/main.ts",
+          "tsConfig": "packages/electron-main/tsconfig.app.json",
           "assets": [
-            "packages/electron/src/assets"
+            "packages/electron-main/src/assets"
           ],
           "esbuildOptions": {
             "sourcemap": true,
@@ -49,15 +49,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@koi/electron:build",
+          "buildTarget": "@koi/electron-main:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@koi/electron:build:development"
+            "buildTarget": "@koi/electron-main:build:development"
           },
           "production": {
-            "buildTarget": "@koi/electron:build:production"
+            "buildTarget": "@koi/electron-main:build:production"
           }
         }
       },
@@ -66,7 +66,8 @@
           "passWithNoTests": true
         }
       }
-    }
+    },
+    "name": "@koi/electron-main"
   },
   "devDependencies": {
     "electron": "^36.3.2"

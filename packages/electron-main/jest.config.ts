@@ -10,7 +10,7 @@ const swcJestConfig = JSON.parse(
 swcJestConfig.swcrc = false;
 
 export default {
-  displayName: '@koi/electron',
+  displayName: '@koi/electron-main',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
