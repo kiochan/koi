@@ -38,12 +38,13 @@
   "include": [
     "../../dist/web-ui/.next/types/**/*.ts",
     "../../web-ui/.next/types/**/*.ts",
+    ".next/types/**/*.ts",
     "next-env.d.ts",
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts"
+    "../../dist/web-ui/types/**/*.ts"
   ],
   "exclude": [
     "out-tsc",
