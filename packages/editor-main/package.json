@@ -1,5 +1,5 @@
 {
-  "name": "@koi/electron-main",
+  "name": "@koi/editor-main",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -8,7 +8,7 @@
         "executor": "nx:run-commands",
         "options": {
           "command": "electron main.js",
-          "cwd": "packages/electron-main/dist"
+          "cwd": "packages/editor-main/dist"
         },
         "dependsOn": [
           "build",
@@ -19,29 +19,29 @@
         "executor": "nx:run-commands",
         "options": {
           "command": "npx cross-env NODE_ENV=development electron dev-entry.js",
-          "cwd": "packages/electron-main"
+          "cwd": "packages/editor-main"
         },
         "dependsOn": [
-          "@koi/web-ui:dev"
+          "@koi/editor-web-ui:dev"
         ]
       },
       "dev:prod": {
         "executor": "nx:run-commands",
         "options": {
           "command": "npx cross-env NODE_ENV=production electron dev-entry.js",
-          "cwd": "packages/electron-main"
+          "cwd": "packages/editor-main"
         },
         "dependsOn": [
-          "@koi/web-ui:build"
+          "@koi/editor-web-ui:build"
         ]
       },
       "build": {
         "executor": "@nx/esbuild:esbuild",
         "defaultConfiguration": "production",
         "options": {
-          "declarationRootDir": "packages/electron-main/src",
+          "declarationRootDir": "packages/editor-main/src",
           "platform": "node",
-          "outputPath": "packages/electron-main/dist",
+          "outputPath": "packages/editor-main/dist",
           "format": [
             "cjs"
           ],
@@ -49,10 +49,10 @@
             "electron"
           ],
           "bundle": true,
-          "main": "packages/electron-main/src/main.ts",
-          "tsConfig": "packages/electron-main/tsconfig.app.json",
+          "main": "packages/editor-main/src/main.ts",
+          "tsConfig": "packages/editor-main/tsconfig.app.json",
           "assets": [
-            "packages/electron-main/src/assets"
+            "packages/editor-main/src/assets"
           ],
           "esbuildOptions": {
             "sourcemap": true,

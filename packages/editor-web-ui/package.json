@@ -1,5 +1,5 @@
 {
-  "name": "@koi/web-ui",
+  "name": "@koi/editor-web-ui",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -8,7 +8,7 @@
         "executor": "nx:run-commands",
         "options": {
           "command": "npx serve@latest out",
-          "cwd": "packages/web-ui"
+          "cwd": "packages/editor-web-ui"
         }
       }
     }

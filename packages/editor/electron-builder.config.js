@@ -10,12 +10,12 @@ module.exports = {
   files: [
     '**/*',
     {
-      from: path.resolve(__dirname, '../../packages/electron-main/dist'),
+      from: path.resolve(__dirname, '../../packages/editor-main/dist'),
       to: '.',
     },
     {
-      from: path.resolve(__dirname, '../../packages/web-ui/out'),
-      to: 'web-ui',
+      from: path.resolve(__dirname, '../../packages/editor-web-ui/out'),
+      to: 'editor-web-ui',
     },
   ],
   extraResources: [],

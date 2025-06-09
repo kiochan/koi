@@ -9,8 +9,8 @@
           "command": "npx electron-builder --config packages/editor/electron-builder.config.js"
         },
         "dependsOn": [
-          "@koi/electron-main:build",
-          "@koi/web-ui:build"
+          "@koi/editor-main:build",
+          "@koi/editor-web-ui:build"
         ],
         "parallel": true
       }

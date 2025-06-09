@@ -1,10 +1,10 @@
 {
-  "name": "@koi/web-ui-e2e",
+  "name": "@koi/editor-web-ui-e2e",
   "version": "0.0.1",
   "private": true,
   "nx": {
     "implicitDependencies": [
-      "@koi/web-ui"
+      "@koi/editor-web-ui"
     ]
   }
 }

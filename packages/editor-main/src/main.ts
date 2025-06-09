@@ -6,7 +6,7 @@ import { existsSync } from 'fs';
 const isDev = () => process.env.NODE_ENV === 'development';
 
 function getWebUiPath(scope: 'prod' | 'bin', file: string): string {
-  const webUiDirname = 'web-ui';
+  const webUiDirname = 'editor-web-ui';
   switch (scope) {
     case 'prod':
       return join(__dirname, `../../${webUiDirname}/out`, file);
@@ -26,11 +26,6 @@ function createWindow() {
       nodeIntegration: false,
     },
   });
-
-  console.log(
-    "getWebUiPath('prod', 'index.html')",
-    getWebUiPath('prod', 'index.html')
-  );
 
   // load the index.html of the app
   if (isDev()) {
