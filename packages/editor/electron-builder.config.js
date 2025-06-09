@@ -15,6 +15,10 @@ module.exports = {
       to: '.',
     },
     {
+      from: path.resolve(__dirname, '../../packages/editor-preload/dist'),
+      to: 'editor-preload',
+    },
+    {
       from: path.resolve(__dirname, '../../packages/editor-web-ui/out'),
       to: 'editor-web-ui',
     },

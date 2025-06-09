@@ -18,12 +18,29 @@ function getWebUiPath(scope: 'prod' | 'bin', file: string): string {
 }
 
 function createWindow() {
+  const preloadScriptPathBin = join(__dirname, 'editor-preload/preload.js');
+  const preloadScriptPathDevBuild = join(
+    __dirname,
+    '../../editor-preload/dist/preload.js'
+  );
+
+  let preloadScriptPath: string | undefined;
+
+  if (existsSync(preloadScriptPathBin)) {
+    preloadScriptPath = preloadScriptPathBin;
+  } else if (existsSync(preloadScriptPathDevBuild)) {
+    preloadScriptPath = preloadScriptPathDevBuild;
+  } else {
+    preloadScriptPath = undefined;
+  }
+
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,
+      preload: preloadScriptPath,
     },
   });
 

@@ -12,7 +12,8 @@
         },
         "dependsOn": [
           "build",
-          "@koi/web-ui:build"
+          "@koi/editor-web-ui:build",
+          "@koi/editor-preload:build"
         ]
       },
       "dev": {
@@ -22,7 +23,8 @@
           "cwd": "packages/editor-main"
         },
         "dependsOn": [
-          "@koi/editor-web-ui:dev"
+          "@koi/editor-web-ui:dev",
+          "@koi/editor-preload:build"
         ]
       },
       "dev:prod": {
@@ -32,7 +34,8 @@
           "cwd": "packages/editor-main"
         },
         "dependsOn": [
-          "@koi/editor-web-ui:build"
+          "@koi/editor-web-ui:build",
+          "@koi/editor-preload:build"
         ]
       },
       "build": {
