@@ -1,7 +1,6 @@
 //@ts-check
 
 const { composePlugins, withNx } = require('@nx/next');
-const packageJson = require('./package.json');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -10,7 +9,6 @@ const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
   output: 'export',
-  distDir: `../../dist/${packageJson.name.replace('@koi/', '')}`,
   nx: {},
 };
 
