@@ -1,10 +1,10 @@
-export default {
-  displayName: '@koi/apps/web-ui',
+module.exports = {
+  displayName: '@koi/editor-web-ui',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: 'test-output/jest/coverage',
+  coverageDirectory: '../../coverage/packages/editor-web-ui',
 };

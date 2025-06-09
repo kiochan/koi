@@ -1,0 +1,83 @@
+{
+  "name": "@koi/editor-main",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "targets": {
+      "start": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "electron main.js",
+          "cwd": "packages/editor-main/dist"
+        },
+        "dependsOn": [
+          "build",
+          "@koi/web-ui:build"
+        ]
+      },
+      "dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx cross-env NODE_ENV=development electron dev-entry.js",
+          "cwd": "packages/editor-main"
+        },
+        "dependsOn": [
+          "@koi/editor-web-ui:dev"
+        ]
+      },
+      "dev:prod": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx cross-env NODE_ENV=production electron dev-entry.js",
+          "cwd": "packages/editor-main"
+        },
+        "dependsOn": [
+          "@koi/editor-web-ui:build"
+        ]
+      },
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "defaultConfiguration": "production",
+        "options": {
+          "declarationRootDir": "packages/editor-main/src",
+          "platform": "node",
+          "outputPath": "packages/editor-main/dist",
+          "format": [
+            "cjs"
+          ],
+          "external": [
+            "electron"
+          ],
+          "bundle": true,
+          "main": "packages/editor-main/src/main.ts",
+          "tsConfig": "packages/editor-main/tsconfig.app.json",
+          "assets": [
+            "packages/editor-main/src/assets"
+          ],
+          "esbuildOptions": {
+            "sourcemap": true,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        },
+        "configurations": {
+          "development": {},
+          "production": {
+            "esbuildOptions": {
+              "sourcemap": false,
+              "outExtension": {
+                ".js": ".js"
+              }
+            }
+          }
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
+}

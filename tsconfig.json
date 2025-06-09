@@ -4,10 +4,10 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/web-ui-e2e"
+      "path": "./packages/editor-web-ui"
     },
     {
-      "path": "./packages/web-ui"
+      "path": "./packages/editor-main"
     }
   ]
 }
