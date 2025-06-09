@@ -7,6 +7,7 @@ module.exports = {
     app: 'packages/editor/runtime',
     output: 'packages/editor/dist',
   },
+  publish: null,
   files: [
     '**/*',
     {
