@@ -25,6 +25,16 @@
           "@koi/web-ui:dev"
         ]
       },
+      "dev:prod": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx cross-env NODE_ENV=production electron dev-entry.js",
+          "cwd": "packages/electron-main"
+        },
+        "dependsOn": [
+          "@koi/web-ui:build"
+        ]
+      },
       "build": {
         "executor": "@nx/esbuild:esbuild",
         "defaultConfiguration": "production",
