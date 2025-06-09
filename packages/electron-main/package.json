@@ -1,22 +1,44 @@
 {
-  "name": "@koi/electron",
+  "name": "@koi/electron-main",
   "version": "0.0.1",
   "private": true,
   "nx": {
     "targets": {
+      "start": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "electron main.js",
+          "cwd": "packages/electron-main/dist"
+        },
+        "dependsOn": [
+          "build",
+          "@koi/web-ui:build"
+        ]
+      },
+      "dev": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "npx cross-env NODE_ENV=development electron dev-entry.js",
+          "cwd": "packages/electron-main"
+        },
+        "dependsOn": [
+          "@koi/web-ui:dev"
+        ]
+      },
       "build": {
         "executor": "@nx/esbuild:esbuild",
-        "outputs": [
-          "{options.outputPath}"
-        ],
         "defaultConfiguration": "production",
         "options": {
+          "declarationRootDir": "packages/electron-main/src",
           "platform": "node",
           "outputPath": "packages/electron-main/dist",
           "format": [
             "cjs"
           ],
-          "bundle": false,
+          "external": [
+            "electron"
+          ],
+          "bundle": true,
           "main": "packages/electron-main/src/main.ts",
           "tsConfig": "packages/electron-main/tsconfig.app.json",
           "assets": [
@@ -41,35 +63,11 @@
           }
         }
       },
-      "serve": {
-        "continuous": true,
-        "executor": "@nx/js:node",
-        "defaultConfiguration": "development",
-        "dependsOn": [
-          "build"
-        ],
-        "options": {
-          "buildTarget": "@koi/electron-main:build",
-          "runBuildTargetDependencies": false
-        },
-        "configurations": {
-          "development": {
-            "buildTarget": "@koi/electron-main:build:development"
-          },
-          "production": {
-            "buildTarget": "@koi/electron-main:build:production"
-          }
-        }
-      },
       "test": {
         "options": {
           "passWithNoTests": true
         }
       }
-    },
-    "name": "@koi/electron-main"
-  },
-  "devDependencies": {
-    "electron": "^36.3.2"
+    }
   }
 }
