@@ -1,6 +1,5 @@
 import { app, BrowserWindow } from 'electron';
 import { join } from 'path';
-import { existsSync } from 'fs';
 
 const isDev = () => process.env.NODE_ENV === 'development';
 
@@ -16,7 +15,7 @@ function createWindow() {
 
   // load the index.html of the app
   const indexPath = join(__dirname, '../../web-ui/out/index.html');
-  if (!isDev() && existsSync(indexPath)) {
+  if (!isDev()) {
     win.loadFile(indexPath);
   } else {
     win.loadURL('http://localhost:3000'); // fallback: dev mode
