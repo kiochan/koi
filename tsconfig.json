@@ -4,9 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./packages/editor-web-ui-e2e"
-    },
-    {
       "path": "./packages/editor-web-ui"
     },
     {
