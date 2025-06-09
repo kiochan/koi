@@ -1,18 +1,10 @@
-const { readFileSync } = require('fs');
-const path = require('path');
-
-const swcJestConfig = JSON.parse(
-  readFileSync(path.join(__dirname, '.spec.swcrc'), 'utf-8')
-);
-swcJestConfig.swcrc = false;
-
 module.exports = {
-  displayName: '@koi/electron-main',
+  displayName: '@koi/editor-main',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
+    '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: 'test-output/jest/coverage',
+  coverageDirectory: '../../coverage/packages/editor-main',
 };
