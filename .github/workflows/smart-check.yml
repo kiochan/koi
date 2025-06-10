@@ -1,9 +1,8 @@
-name: CI
+name: Smart Check
 
 on:
   push:
-    branches:
-      - dev
+    branches: [dev]
   pull_request:
 
 permissions:
@@ -11,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  main:
+  affected:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,39 +19,34 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Show root directory structure
-        run: ls -la
-
-      - name: Show project files
-        run: ls -la apps libs nx.json tsconfig.base.json || true
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
 
+      - name: Restore Nx Cache
+        uses: actions/cache@v3
+        with:
+          path: .nx/cache
+          key: nx-cache-${{ github.ref }}-${{ github.sha }}
+          restore-keys: |
+            nx-cache-${{ github.ref }}-
+            nx-cache-
+
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
-
-      - name: Check Nx CLI version
-        run: npx nx --version
-
-      - name: Nx report
-        run: npx nx report
 
       - name: Set base/head SHAs
         uses: nrwl/nx-set-shas@v4
 
-      - name: Show affected range
-        run: |
-          echo "Base: $NX_BASE"
-          echo "Head: $NX_HEAD"
+      - name: Fetch base branch explicitly
+        run: git fetch origin dev:refs/remotes/origin/dev
 
       - name: Run affected tasks with fallback
         run: |
           echo "Running affected tasks..."
-          npx nx affected -t lint test build --verbose || {
+          npx nx affected -t lint test build --base=origin/dev --head=${{ github.sha }} --verbose || {
             echo "⚠️ nx affected failed. Running all tasks instead...";
-            npx nx run-many -t lint test build --all;
+            npx nx run-many -t lint test build --all --verbose;
           }
