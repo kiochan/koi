@@ -1,6 +1,5 @@
 {
   "name": "@koi/editor",
-  "version": "0.0.1",
   "nx": {
     "targets": {
       "build": {
