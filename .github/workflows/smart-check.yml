@@ -1,9 +1,8 @@
-name: CI
+name: Smart Check (Nx Affected)
 
 on:
   push:
-    branches:
-      - dev
+    branches: [dev]
   pull_request:
 
 permissions:
@@ -11,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  main:
+  affected:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,12 +18,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Show root directory structure
-        run: ls -la
-
-      - name: Show project files
-        run: ls -la apps libs nx.json tsconfig.base.json || true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,19 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Check Nx CLI version
-        run: npx nx --version
-
-      - name: Nx report
-        run: npx nx report
-
       - name: Set base/head SHAs
         uses: nrwl/nx-set-shas@v4
-
-      - name: Show affected range
-        run: |
-          echo "Base: $NX_BASE"
-          echo "Head: $NX_HEAD"
 
       - name: Run affected tasks with fallback
         run: |
