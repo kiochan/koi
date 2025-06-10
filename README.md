@@ -1,7 +1,7 @@
 # Koi
 
 [![Version](https://img.shields.io/github/package-json/v/kiochan/koi?style=flat-square)](https://github.com/kiochan/koi/blob/main/package.json)
-[![Build](https://img.shields.io/github/actions/workflow/status/kiochan/koi/ci.yml?label=Build&style=flat-square)](https://github.com/kiochan/koi/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/kiochan/koi/build.yml?label=Build&style=flat-square)](https://github.com/kiochan/koi/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/kiochan/koi?style=flat-square)](https://github.com/kiochan/koi/commits/main)
 
 [![Made with Nx](https://img.shields.io/badge/monorepo-managed%20by%20Nx-blueviolet?style=flat-square)](https://nx.dev/)

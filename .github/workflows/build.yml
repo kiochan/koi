@@ -1,10 +1,8 @@
 name: Build
 
 on:
-  workflow_run:
-    workflows: ['Lint']
-    types:
-      - completed
+  push:
+    branches: [dev]
 
 jobs:
   build:
@@ -25,13 +23,5 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Set base/head SHAs
-        uses: nrwl/nx-set-shas@v4
-
-      - name: Run affected build with fallback
-        run: |
-          echo "Running affected build..."
-          npx nx affected -t build --verbose || {
-            echo "⚠️ affected build failed, running full build instead...";
-            npx nx run-many --target=build --all
-          }
+      - name: Full build
+        run: npx nx run-many --target=build --all --verbose
