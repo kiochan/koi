@@ -1,0 +1,21 @@
+{
+  "name": "@koi/editor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/editor",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx electron-builder --config packages/editor/electron-builder.config.js"
+      },
+      "dependsOn": [
+        "@koi/editor-main:build",
+        "@koi/editor-web-ui:build"
+      ],
+      "outputs": [],
+      "parallel": true
+    }
+  },
+  "tags": []
+}

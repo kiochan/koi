@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@koi/editor-web-ui/*": ["./src/*"]
     },
     "types": ["jest", "node"],
     "outDir": "dist",

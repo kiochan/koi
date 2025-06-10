@@ -1,0 +1,45 @@
+{
+  "name": "@koi/editor-preload",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/editor-preload/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "defaultConfiguration": "production",
+      "options": {
+        "declarationRootDir": "packages/editor-preload/src",
+        "platform": "node",
+        "outputPath": "packages/editor-preload/dist",
+        "format": ["cjs"],
+        "external": ["electron"],
+        "bundle": true,
+        "main": "packages/editor-preload/src/preload.ts",
+        "tsConfig": "packages/editor-preload/tsconfig.app.json",
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "options": {
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
