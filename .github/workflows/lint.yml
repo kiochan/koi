@@ -1,9 +1,10 @@
 name: Lint
 
 on:
-  push:
-    branches: [dev]
-  pull_request:
+  workflow_run:
+    workflows: ['Smart Check']
+    types:
+      - completed
 
 jobs:
   lint:

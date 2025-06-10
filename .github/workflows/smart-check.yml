@@ -1,4 +1,4 @@
-name: Smart Check (Nx Affected)
+name: Smart Check
 
 on:
   push:
