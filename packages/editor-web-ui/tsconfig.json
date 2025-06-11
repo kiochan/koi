@@ -18,12 +18,13 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@koi/editor-web-ui/*": ["./src/*"]
-    },
     "types": ["jest", "node"],
     "outDir": "dist",
     "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@koi/editor-web-ui/*": ["./*"]
+    },
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [

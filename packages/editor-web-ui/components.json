@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/app/styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "utils": "@koi/editor-web-ui/lib/utils",
+    "components": "@koi/editor-web-ui/components",
+    "ui": "@koi/editor-web-ui/components/ui",
+    "lib": "@koi/editor-web-ui/lib",
+    "hooks": "@koi/editor-web-ui/hooks"
+  },
+  "iconLibrary": "lucide"
+}
