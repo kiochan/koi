@@ -13,13 +13,19 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/build.yml",
+      "{workspaceRoot}/.github/workflows/smart-check.yml"
+    ]
   },
   "nxCloudId": "684691ee82ccd94515a96943",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
       "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
         "typecheck": {
           "targetName": "typecheck"
         },
@@ -53,6 +59,17 @@
       "options": {
         "targetName": "test"
       }
+    },
+    {
+      "plugin": "@nx/react/router-plugin",
+      "options": {
+        "buildTargetName": "build",
+        "devTargetName": "dev",
+        "startTargetName": "start",
+        "watchDepsTargetName": "watch-deps",
+        "buildDepsTargetName": "build-deps",
+        "typecheckTargetName": "typecheck"
+      }
     }
   ],
   "targetDefaults": {
@@ -71,8 +88,17 @@
         "style": "tailwind",
         "linter": "eslint"
       }
+    },
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "none"
+      }
     }
   },
+  "workspaceLayout": {
+    "appsDir": "packages",
+    "libsDir": "packages"
+  }
   "workspaceLayout": {
     "appsDir": "packages",
     "libsDir": "packages"

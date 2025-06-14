@@ -15,7 +15,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "node \"scripts/shadcn-add.js\"",
-        "cwd": "packages/editor-web-ui"
+        "cwd": "packages/ui"
       }
     }
   },

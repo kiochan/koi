@@ -21,9 +21,9 @@
     "types": ["jest", "node"],
     "outDir": "dist",
     "rootDir": "src",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@koi/editor-web-ui/*": ["./*"]
+      "@koi/editor-web-ui/*": ["./src/*"]
     },
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
@@ -43,6 +43,7 @@
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
     ".next",
+    "out",
     "eslint.config.js",
     "eslint.config.cjs",
     "eslint.config.mjs"

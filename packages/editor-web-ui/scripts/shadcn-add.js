@@ -1,10 +1,8 @@
 const { execSync } = require('child_process');
 
-const componentArg = process.argv.find(
-  (arg) => arg.startsWith('--component=') || arg.startsWith('-c=')
-);
+const componentArg = process.argv.find((arg) => arg.startsWith('--component='));
 if (!componentArg) {
-  console.error('❌ please pass conponent type --component=button');
+  console.error('❌ please pass conponent type, like: "--component=button"');
   process.exit(1);
 }
 
