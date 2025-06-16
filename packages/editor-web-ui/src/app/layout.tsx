@@ -1,10 +1,18 @@
 import './global.css';
+import '../lib/i18n';
 
-import { ThemeProvider } from '@koi/editor-web-ui/components/theme-provider';
+import { ThemeProvider } from '../components/theme-provider';
 
 export const metadata = {
-  title: 'Home',
-  description: 'home page of the application',
+  title: 'Koi',
+  description: 'Koi  Workshop',
+  icons: {
+    icon: [
+      { url: '/icon1.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon0.svg', media: '(prefers-color-scheme: dark)' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Koi" />
+      </head>
       <body>
         <ThemeProvider
           attribute="class"
