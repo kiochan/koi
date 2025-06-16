@@ -1,3 +1,6 @@
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { compilerOptions } = require('./tsconfig.base.json');
+
 module.exports = {
   displayName: '@koi/editor-web-ui',
   preset: '../../jest.preset.js',
@@ -7,4 +10,8 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/packages/editor-web-ui',
+
+  moduleNameMapper: {
+    '^@koi/editor-web-ui/(.*)$': '<rootDir>/src/$1',
+  },
 };
