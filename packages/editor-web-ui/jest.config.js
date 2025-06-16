@@ -1,5 +1,5 @@
 const { pathsToModuleNameMapper } = require('ts-jest');
-const { compilerOptions } = require('./tsconfig.base.json');
+const { compilerOptions } = require('./tsconfig.json');
 
 module.exports = {
   displayName: '@koi/editor-web-ui',
