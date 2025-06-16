@@ -17,6 +17,11 @@
         "command": "node \"scripts/shadcn-add.js\"",
         "cwd": "packages/ui"
       }
+    },
+    "test": {
+      "options": {
+        "passWithNoTests": true
+      }
     }
   },
   "tags": []
