@@ -1,4 +1,4 @@
-import { SidebarInset } from './ui/sidebar';
+import { SidebarInset } from '../ui/sidebar';
 import { AppNavbar } from './app-navbar';
 
 export function AppMainContent() {

@@ -2,9 +2,9 @@
 
 import * as React from 'react';
 
-import { AppSidebarContent } from '@koi/editor-web-ui/components/app-sidebar-content';
-import { AppSidebarTools } from '@koi/editor-web-ui/components/app-sidebar-tools';
-import { AppProjectSwitcher } from '@koi/editor-web-ui/components/app-sidebar-project-switcher';
+import { AppSidebarContent } from '@koi/editor-web-ui/components/app/app-sidebar-content';
+import { AppSidebarTools } from '@koi/editor-web-ui/components/app/app-sidebar-tools';
+import { AppProjectSwitcher } from '@koi/editor-web-ui/components/app/app-sidebar-project-switcher';
 import {
   Sidebar,
   SidebarContent,
@@ -12,9 +12,9 @@ import {
   SidebarHeader,
   SidebarRail,
 } from '@koi/editor-web-ui/components/ui/sidebar';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import { Settings } from 'lucide-react';
-import { useAppStore } from '../stores/use-app-store';
+import { useAppStore } from '../../stores/use-app-store';
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const [data] = useAppStore();

@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from './ui/breadcrumb';
+} from '../ui/breadcrumb';
 
 export function AppNavbarBreadcrumb() {
   return (

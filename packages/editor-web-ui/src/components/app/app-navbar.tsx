@@ -1,6 +1,6 @@
 import { Separator } from '@radix-ui/react-separator';
 import { AppNavbarBreadcrumb } from './app-navbar-breadcrumb';
-import { SidebarTrigger } from './ui/sidebar';
+import { SidebarTrigger } from '../ui/sidebar';
 
 export function AppNavbar() {
   return (

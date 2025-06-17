@@ -1,6 +1,6 @@
 import { AppMainContent } from './app-main-content';
 import { AppSidebar } from './app-sidebar';
-import { SidebarProvider } from './ui/sidebar';
+import { SidebarProvider } from '../ui/sidebar';
 
 export function AppMain() {
   return (

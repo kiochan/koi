@@ -1,5 +1,5 @@
 'use client';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import {
   Menubar,
   MenubarContent,
@@ -7,14 +7,18 @@ import {
   MenubarMenu,
   MenubarSeparator,
   MenubarTrigger,
-} from './ui/menubar';
-import { menubarConfig } from '../config/menu';
+} from '../ui/menubar';
+import { menubarConfig } from '../../config/menu';
 
-import { isMenuItem, MenuItem, MenuItemSeperator } from '../config/helper/menu';
+import {
+  isMenuItem,
+  MenuItem,
+  MenuItemSeperator,
+} from '../../config/helper/menu';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-import logo from './logo.svg';
+import logo from '../assets/logo.svg';
 import { AppCaptionButtons } from './app-caption-buttons';
 
 export function AppMenubar() {

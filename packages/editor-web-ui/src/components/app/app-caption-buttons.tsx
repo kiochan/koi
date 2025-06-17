@@ -1,5 +1,5 @@
 import { Minimize, Maximize, X } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 export function AppCaptionButtons() {
   return (
