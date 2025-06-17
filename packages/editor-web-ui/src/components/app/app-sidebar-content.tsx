@@ -55,8 +55,8 @@ export function AppSidebarContent({
               </CollapsibleTrigger>
               <CollapsibleContent>
                 <SidebarMenuSub>
-                  {item.items?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
+                  {item.items?.map((subItem, index) => (
+                    <SidebarMenuSubItem key={subItem.title + index}>
                       <SidebarMenuSubButton asChild>
                         <span>{subItem.title}</span>
                       </SidebarMenuSubButton>

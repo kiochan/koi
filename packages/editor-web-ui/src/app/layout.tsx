@@ -1,5 +1,4 @@
 import './global.css';
-import '../lib/i18n';
 
 import { ThemeProvider } from '../components/theme-provider';
 

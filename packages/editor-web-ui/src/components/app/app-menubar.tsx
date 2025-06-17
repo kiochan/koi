@@ -46,17 +46,17 @@ export function AppMenubar() {
                   <MenubarContent>
                     {menu.items.map((item, index) => {
                       if (item === MenuItemSeperator) {
-                        const key = menu.id + index;
+                        const key = `${menu.id}_sep_${index}`;
                         return <MenubarSeparator key={key} />;
                       }
                       if (typeof item === 'string') {
-                        const key = menu.id + item;
+                        const key = `${menu.id}_${item}`;
                         const text = t(item);
                         return <MenubarItem key={key}>{text}</MenubarItem>;
                       }
                       if (isMenuItem(item)) {
                         const menuItem = item as MenuItem;
-                        const key = menu.id + item.id;
+                        const key = `${menu.id}_${item.id}`;
                         const options = menuItem.options || undefined;
                         const onClick = menuItem.onClick || undefined;
                         const text = t(item.id, options);
