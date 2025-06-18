@@ -62,25 +62,22 @@ function createWindow() {
     app.quit();
   }
 
-  win.webContents.on(
-    'did-fail-load',
-    (event, errorCode, errorDescription, validatedURL) => {
-      if (existsSync(getWebUiPath('prod', '404.html'))) {
-        win.loadURL(pathToFileURL(getWebUiPath('prod', '404.html')).toString());
-      } else if (existsSync(getWebUiPath('bin', 'index.html'))) {
-        win.loadURL(pathToFileURL(getWebUiPath('bin', '404.html')).toString());
-      } else {
-        dialog.showMessageBox({
-          type: 'error',
-          title: 'Error',
-          message: 'Invalid path access',
-          detail: 'Attempted to access path outside allowed directory.',
-          buttons: ['Terminate'],
-        });
-        app.quit();
-      }
+  win.webContents.on('did-fail-load', () => {
+    if (existsSync(getWebUiPath('prod', '404.html'))) {
+      win.loadURL(pathToFileURL(getWebUiPath('prod', '404.html')).toString());
+    } else if (existsSync(getWebUiPath('bin', 'index.html'))) {
+      win.loadURL(pathToFileURL(getWebUiPath('bin', '404.html')).toString());
+    } else {
+      dialog.showMessageBox({
+        type: 'error',
+        title: 'Error',
+        message: 'Invalid path access',
+        detail: 'Attempted to access path outside allowed directory.',
+        buttons: ['Terminate'],
+      });
+      app.quit();
     }
-  );
+  });
 }
 
 app.whenReady().then(createWindow);
