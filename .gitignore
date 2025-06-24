@@ -51,3 +51,4 @@ test-output
 
 external/live2d-core/*
 !external/live2d-core/.gitkeep
+!external/live2d-core/*.md
