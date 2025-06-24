@@ -2,3 +2,7 @@
 	path = external/cubism
 	url = https://github.com/Live2D/CubismWebFramework.git
 	branch = master
+[submodule "external/cubism-samples"]
+	path = external/cubism-samples
+	url = https://github.com/Live2D/CubismWebSamples.git
+	branch = master
