@@ -48,3 +48,6 @@ Thumbs.db
 out
 
 test-output
+
+external/live2d-core/*
+!external/live2d-core/.gitkeep
