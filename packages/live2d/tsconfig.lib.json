@@ -11,10 +11,10 @@
     "allowJs": true,
     "checkJs": false,
     "types": ["node"],
+    "strictNullChecks": false,
     "paths": {
       "@external/framework/*": ["./src/external/framework/src/*"]
     }
   },
-  "include": ["src/**/*.ts"],
-  "references": []
+  "include": ["src/**/*.ts", "src/external/framework/src/**/*.ts"]
 }
