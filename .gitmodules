@@ -1,8 +1,8 @@
-[submodule "external/cubism"]
-	path = external/cubism
+[submodule "packages/live2d/src/external/framework"]
+	path = packages/live2d/src/external/framework
 	url = https://github.com/Live2D/CubismWebFramework.git
 	branch = master
-[submodule "external/cubism-samples"]
-	path = external/cubism-samples
+[submodule "packages/live2d/src/external/samples"]
+	path = packages/live2d/src/external/samples
 	url = https://github.com/Live2D/CubismWebSamples.git
 	branch = master
