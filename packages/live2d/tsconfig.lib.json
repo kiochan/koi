@@ -10,11 +10,22 @@
     "skipLibCheck": true,
     "allowJs": true,
     "checkJs": false,
-    "types": ["node"],
+    "strict": false,
     "strictNullChecks": false,
+    "noImplicitOverride": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "lib": ["dom", "esnext"],
+    "typeRoots": ["src/external/core", "src/types", "./node_modules/@types"],
+    "types": [],
     "paths": {
       "@external/framework/*": ["./src/external/framework/src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/external/framework/src/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/external/framework/src/**/*.ts",
+    "src/external/framework/types/**/*.d.ts"
+  ]
 }
