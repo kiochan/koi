@@ -17,8 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          submodules: recursive
           fetch-depth: 0
-          lfs: true 
+          lfs: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

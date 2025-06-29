@@ -8,6 +8,9 @@
     },
     {
       "path": "./packages/editor-main"
+    },
+    {
+      "path": "./packages/live2d"
     }
   ]
 }
