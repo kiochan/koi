@@ -99,8 +99,4 @@
     "appsDir": "packages",
     "libsDir": "packages"
   }
-  "workspaceLayout": {
-    "appsDir": "packages",
-    "libsDir": "packages"
-  }
 }
