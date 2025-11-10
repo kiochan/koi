@@ -48,7 +48,3 @@ Thumbs.db
 out
 
 test-output
-
-**/external/core/*
-!**/external/core/.gitkeep
-!**/external/core/*.md
