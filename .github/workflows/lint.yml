@@ -1,21 +1,14 @@
-name: Build
+name: Lint
 
 on:
-  push:
-    branches: [dev]
   pull_request:
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          lfs: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,9 +20,9 @@ jobs:
         with:
           version: 9
           run_install: false
-
+        
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build all packages
-        run: pnpm build
+      - name: Run Biome check
+        run: pnpm biome check

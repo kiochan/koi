@@ -1,9 +1,7 @@
 {
   "recommendations": [
-    "nrwl.angular-console",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "ms-playwright.playwright",
-    "firsttris.vscode-jest-runner"
+    "biomejs.biome",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-typescript-tslint-plugin"
   ]
 }

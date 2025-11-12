@@ -1,0 +1,13 @@
+{
+  "name": "@koi/creator-preload",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsx esbuild.config.ts",
+    "lint": "biome check",
+    "format": "biome format --write"
+  },
+  "devDependencies": {}
+}

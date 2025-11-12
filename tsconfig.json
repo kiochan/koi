@@ -1,16 +1,8 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compileOnSave": false,
   "files": [],
   "references": [
-    {
-      "path": "./packages/editor-web-ui"
-    },
-    {
-      "path": "./packages/editor-main"
-    },
-    {
-      "path": "./packages/live2d"
-    }
+    { "path": "apps/creator-main" },
+    { "path": "apps/creator-preload" },
+    { "path": "apps/creator-web" }
   ]
 }

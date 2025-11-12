@@ -1,0 +1,18 @@
+{
+  "name": "@koi/creator-main",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "tsx esbuild.config.ts",
+    "dev": "electron ./dev.js",
+    "lint": "biome check",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "@koi/creator-web": "workspace:*",
+    "@koi/creator-preload": "workspace:*"
+  }
+}
