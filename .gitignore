@@ -47,8 +47,8 @@ Thumbs.db
 .next
 out
 
-test-output
+# Turbo Repo
+.turbo/
 
-**/external/core/*
-!**/external/core/.gitkeep
-!**/external/core/*.md
+# TypeScript
+tsconfig.tsbuildinfo

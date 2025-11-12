@@ -1,0 +1,18 @@
+{
+  "name": "@koi/creator",
+  "version": "0.1.0",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "electron-builder --config electron-builder.config.js"
+  },
+  "dependencies": {
+    "@koi/creator-main": "workspace:*",
+    "@koi/creator-preload": "workspace:*",
+    "@koi/creator-web": "workspace:*"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
