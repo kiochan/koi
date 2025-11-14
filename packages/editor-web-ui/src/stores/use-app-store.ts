@@ -21,18 +21,18 @@ export function useAppStore() {
     ],
     navPanels: [
       {
-        title: 'Panel Name',
+        title: 'Kim1-250212.model3',
         icon: SquareTerminal,
         isActive: true,
         items: [
           {
-            title: 'Pannel Action',
+            title: 'Viewer',
           },
           {
-            title: 'Pannel Action',
+            title: 'Parameters',
           },
           {
-            title: 'Pannel Action',
+            title: 'Mapping',
           },
         ],
       },
