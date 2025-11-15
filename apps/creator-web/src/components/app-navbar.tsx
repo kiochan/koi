@@ -1,5 +1,5 @@
+import { Separator } from "@koi/ui/components/separator";
 import { SidebarTrigger } from "@koi/ui/components/sidebar";
-import { Separator } from "@radix-ui/react-separator";
 import { AppNavbarBreadcrumb } from "./app-navbar-breadcrumb";
 
 export function AppNavbar() {
