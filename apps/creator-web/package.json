@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@koi/ui": "workspace:*",
+    "@koi/icon-logo": "workspace:*",
     "lucide-react": "^0.475.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",

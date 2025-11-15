@@ -82,6 +82,9 @@ importers:
 
   apps/creator-web:
     dependencies:
+      '@koi/icon-logo':
+        specifier: workspace:*
+        version: link:../../libs/icon-logo
       '@koi/ui':
         specifier: workspace:*
         version: link:../../libs/ui
@@ -125,6 +128,8 @@ importers:
       typescript:
         specifier: ^5
         version: 5.9.3
+
+  libs/icon-logo: {}
 
   libs/typescript-config: {}
 

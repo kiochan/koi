@@ -1,12 +1,5 @@
-import { Button } from "@koi/ui/components/button";
+import { App } from "../components/app";
 
-export default function Page() {
-  return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello Creators!</h1>
-        <Button size="sm">Button</Button>
-      </div>
-    </div>
-  );
+export default function Main() {
+  return <App />;
 }

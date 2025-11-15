@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Koi Creator",
-};
-
 import "@koi/ui/globals.css";
-import { Providers } from "@koi/creator-web/shared/providers";
+import { ThemeProvider } from "@koi/creator-web/shared/providers";
+
+export const metadata = {
+  title: "Koi Creator",
+  icons: {
+    icon: [
+      { url: "/icon1.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon0.svg", media: "(prefers-color-scheme: dark)" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
+} satisfies Metadata;
 
 export default function RootLayout({
   children,
@@ -14,8 +21,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Koi" />
+      </head>
       <body>
-        <Providers>{children}</Providers>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
