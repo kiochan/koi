@@ -9,5 +9,7 @@
     "lint": "biome check",
     "format": "biome format --write"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@koi/typescript-config": "workspace:*"
+  }
 }

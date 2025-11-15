@@ -14,5 +14,8 @@
   "dependencies": {
     "@koi/creator-web": "workspace:*",
     "@koi/creator-preload": "workspace:*"
+  },
+  "devDependencies": {
+    "@koi/typescript-config": "workspace:*"
   }
 }
