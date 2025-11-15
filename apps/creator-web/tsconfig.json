@@ -1,26 +1,24 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "@koi/typescript-config/nextjs.json",
   "compilerOptions": {
-    "moduleResolution": "bundler",
-    "jsx": "react-jsx",
-    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@koi/creator-web/*": ["./src/*"],
+      "@koi/ui/*": ["../../packages/ui/src/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@koi/creator-web/*": ["./src/*"]
-    },
-    "baseUrl": "./src"
+    ]
   },
   "include": [
     "next-env.d.ts",
+    "next.config.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "../../../../apps/creator-web/src/providers.tsx"
   ],
   "exclude": ["node_modules"]
 }

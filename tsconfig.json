@@ -1,8 +1,3 @@
 {
-  "files": [],
-  "references": [
-    { "path": "apps/creator-main" },
-    { "path": "apps/creator-preload" },
-    { "path": "apps/creator-web" }
-  ]
+  "extends": "@koi/typescript-config/base.json"
 }
