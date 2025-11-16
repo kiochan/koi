@@ -3,7 +3,7 @@
 [![Build](https://img.shields.io/github/actions/workflow/status/kiochan/koi/build.yml?label=Build&style=flat-square)](https://github.com/kiochan/koi/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/kiochan/koi?style=flat-square)](https://github.com/kiochan/koi/commits/main)
 
-[![Made with Nx](https://img.shields.io/badge/monorepo-Turborepo-blueviolet?style=flat-square)](<[badge](https://turborepo.com/)>)
+[![Turborepo](https://img.shields.io/badge/monorepo-Turborepo-blueviolet?style=flat-square)](<[badge](https://turborepo.com/)>)
 [![Next.js](https://img.shields.io/badge/frontend-Next.js-black?logo=next.js&style=flat-square)](https://nextjs.org/)
 [![Electron](https://img.shields.io/badge/built%20with-Electron-47848F?logo=electron&logoColor=white&style=flat-square)](https://www.electronjs.org/)
 [![Capacitor](https://img.shields.io/badge/mobile-Capacitor-119EFF?logo=capacitor&style=flat-square)](https://capacitorjs.com/)
@@ -48,5 +48,11 @@ Feel free to open issues or submit pull requests.
 ## Author
 
 Created by [Kiochan](https://github.com/kiochan)
+
+## License
+
+This project is licensed under the AGPLv3 license, with certain packages released under the MIT license.
+
+For details, see the LICENSE file.
 
 [![AGPLv3 License](https://img.shields.io/badge/license-AGPLv3--only-blue?style=flat-square)](LICENSE)

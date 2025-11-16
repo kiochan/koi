@@ -1,6 +1,6 @@
-# `@koi/typescript-config`
+# `@koi/ui`
 
-Shared typescript configuration for this workspace.
+Shared UI components for Web UI.
 
 ## License
 
