@@ -1,0 +1,9 @@
+{
+  "name": "@koi/icon-logo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
